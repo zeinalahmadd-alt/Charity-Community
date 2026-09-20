@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lichtblick e.V. – Gemeinsam Gutes tun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Dark-Mode-Schalter: muss direktes Kind von <body> bleiben, alle Dunkelmodus-Stile haengen an dieser Checkbox -->
+    <input type="checkbox" id="dark-mode" class="dark-mode-input" />
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#" class="brand">Lichtblick<span> e.V.</span></a>
+
+        <div class="nav-actions">
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+          <!-- Hamburger-Button (nur mobil sichtbar) -->
+          <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <!-- Hell-/Dunkelmodus-Umschalter -->
+          <label for="dark-mode" class="theme-btn" title="Design wechseln">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </label>
+
+          <ul class="nav-links">
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#veranstaltungen">Veranstaltungen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#kontakt" class="btn btn-nav">Jetzt spenden</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================= HERO ================= -->
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-tagline">Gemeinnützig seit 2008</p>
+          <h1>Gemeinsam machen wir die Welt ein Stück heller.</h1>
+          <p class="hero-text">
+            Wir unterstützen Kinder, Familien und ältere Menschen in Not – mit
+            Projekten, Bildung und Ihrer Hilfe.
+          </p>
+          <div class="hero-actions">
+            <a href="#kontakt" class="btn btn-primary">Jetzt mithelfen</a>
+            <a href="#ueber-uns" class="btn btn-secondary">Mehr erfahren</a>
+          </div>
+        </div>
+        <img
+          class="hero-image"
+          src="assets/hero.jpg"
+          alt="Ehrenamtliche Helfer packen Spenden ein"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= SECTION: ÜBER UNS ================= -->
+      <section id="ueber-uns" class="section">
+        <div class="container">
+          <h2 class="section-title">Über uns</h2>
+          <p class="section-subtitle">
+            Wer wir sind und wofür wir uns einsetzen.
+          </p>
+
+          <div class="about-grid">
+            <div class="about-media">
+              <img
+                src="assets/about.jpg"
+                alt="Helfende Hände – Ehrenamt bei Lichtblick e.V."
+              />
+            </div>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  Der Verein Lichtblick e.V. wurde 2008 gegründet und setzt sich
+                  für Menschen in schwierigen Lebenslagen ein. Ob
+                  Bildungsprojekte für Kinder, warme Mahlzeiten für Bedürftige
+                  oder Besuche bei einsamen Senioren – unsere über 5.000
+                  ehrenamtlichen Helfer sind jeden Tag im Einsatz.
+                </p>
+                <p>
+                  Unsere Arbeit wird ausschließlich durch Spenden finanziert.
+                  Jeder Beitrag kommt direkt bei den Menschen an, die ihn am
+                  dringendsten brauchen.
+                </p>
+              </div>
+              <div class="stats">
+                <div class="stat-card">
+                  <strong>120+</strong>
+                  <span>Aktive Projekte</span>
+                </div>
+                <div class="stat-card">
+                  <strong>5.000+</strong>
+                  <span>Ehrenamtliche Helfer</span>
+                </div>
+                <div class="stat-card">
+                  <strong>1,2 Mio €</strong>
+                  <span>Spenden im letzten Jahr</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION: VERANSTALTUNGEN (Slider) ================= -->
+      <section id="veranstaltungen" class="section section-alt">
+        <div class="container">
+          <h2 class="section-title">Veranstaltungen</h2>
+          <p class="section-subtitle">
+            Besuchen Sie unsere nächsten Aktionen und seien Sie live dabei.
+          </p>
+
+          <!-- Radiobuttons steuern den Slider vollstaendig ohne JavaScript -->
+          <div class="slider">
+            <input
+              type="radio"
+              name="event-slider"
+              id="slide-1"
+              class="slider-input"
+              checked
+            />
+            <input
+              type="radio"
+              name="event-slider"
+              id="slide-2"
+              class="slider-input"
+            />
+            <input
+              type="radio"
+              name="event-slider"
+              id="slide-3"
+              class="slider-input"
+            />
+            <input
+              type="radio"
+              name="event-slider"
+              id="slide-4"
+              class="slider-input"
+            />
+
+            <div class="slides">
+              <article class="event-card">
+                <img
+                  class="event-img"
+                  src="assets/event-lauf.jpg"
+                  alt="Läufer beim Spendenlauf im Park"
+                />
+                <div class="event-body">
+                  <span class="event-date">14. Sep 2026</span>
+                  <h3>Spendenlauf im Stadtpark</h3>
+                  <p>
+                    Laufen Sie mit uns für einen guten Zweck! Jede gelaufene
+                    Runde bringt eine Spende für unsere Bildungsprojekte.
+                  </p>
+                  <div class="event-meta">
+                    <span>📍 Stadtpark Berlin</span>
+                    <span>🕘 09:00 Uhr</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="event-card">
+                <img
+                  class="event-img"
+                  src="assets/event-konzert.jpg"
+                  alt="Konzertbühne mit Publikum"
+                />
+                <div class="event-body">
+                  <span class="event-date">28. Sep 2026</span>
+                  <h3>Charity-Konzert „Klänge der Hoffnung“</h3>
+                  <p>
+                    Lokale Künstler spielen zugunsten unserer Suppenküche. Der
+                    Eintritt ist frei, Spenden sind herzlich willkommen.
+                  </p>
+                  <div class="event-meta">
+                    <span>📍 Kulturhaus Mitte</span>
+                    <span>🕖 19:00 Uhr</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="event-card">
+                <img
+                  class="event-img"
+                  src="assets/event-kleidung.jpg"
+                  alt="Gestell mit gesammelter Kleidung"
+                />
+                <div class="event-body">
+                  <span class="event-date">05. Okt 2026</span>
+                  <h3>Kleidersammelaktion</h3>
+                  <p>
+                    Bringen Sie gut erhaltene Kleidung vorbei. Wir sortieren sie
+                    und geben sie direkt an bedürftige Familien weiter.
+                  </p>
+                  <div class="event-meta">
+                    <span>📍 Vereinszentrum</span>
+                    <span>🕙 10:00 Uhr</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="event-card">
+                <img
+                  class="event-img"
+                  src="assets/event-backen.jpg"
+                  alt="Frisch gebackene Muffins"
+                />
+                <div class="event-body">
+                  <span class="event-date">12. Okt 2026</span>
+                  <h3>Benefiz-Backen mit Kindern</h3>
+                  <p>
+                    Gemeinsames Backen, Lachen und Helfen: Der Erlös des
+                    Kuchenverkaufs unterstützt unsere Ferienfreizeiten.
+                  </p>
+                  <div class="event-meta">
+                    <span>📍 Gemeindehaus Nord</span>
+                    <span>🕑 14:00 Uhr</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Pfeil-Navigation: je nach Folie wird ein anderes Label-Paar eingeblendet -->
+            <div class="slider-arrows">
+              <label class="arrow left a1" for="slide-4">❮</label>
+              <label class="arrow right a1" for="slide-2">❯</label>
+
+              <label class="arrow left a2" for="slide-1">❮</label>
+              <label class="arrow right a2" for="slide-3">❯</label>
+
+              <label class="arrow left a3" for="slide-2">❮</label>
+              <label class="arrow right a3" for="slide-4">❯</label>
+
+              <label class="arrow left a4" for="slide-3">❮</label>
+              <label class="arrow right a4" for="slide-1">❯</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION: KONTAKT ================= -->
+      <section id="kontakt" class="section">
+        <div class="container">
+          <h2 class="section-title">Kontakt</h2>
+          <p class="section-subtitle">
+            Haben Sie Fragen oder möchten Sie mithelfen? Schreiben Sie uns!
+          </p>
+
+          <div class="contact-grid">
+            <form class="contact-form" action="#" method="post">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ihr Name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">E-Mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ihre@email.de"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="betreff">Betreff</label>
+                <input
+                  type="text"
+                  id="betreff"
+                  name="betreff"
+                  placeholder="Worum geht es?"
+                />
+              </div>
+              <div class="form-field">
+                <label for="nachricht">Nachricht</label>
+                <textarea
+                  id="nachricht"
+                  name="nachricht"
+                  rows="5"
+                  placeholder="Ihre Nachricht an uns ..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Nachricht senden
+              </button>
+            </form>
+
+            <aside class="contact-info">
+              <h3>So erreichen Sie uns</h3>
+              <p>Musterstraße 12<br />10115 Berlin</p>
+              <p>
+                Telefon: +49 30 12345678<br />E-Mail: hallo@lichtblick-ev.de
+              </p>
+              <p>Bürozeiten:<br />Mo–Fr von 9 bis 17 Uhr</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#" class="brand brand-footer"
+            >Lichtblick<span> e.V.</span></a
+          >
+          <p class="footer-text">
+            Gemeinnütziger Verein für Menschen in Not. Gemeinsam bewirken wir
+            mehr.
+          </p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#veranstaltungen">Veranstaltungen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Rechtliches</h4>
+          <ul class="footer-links">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Satzung</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Lichtblick e.V. Alle Rechte vorbehalten.</p>
+      </div>
+    </footer>
+
+    <!-- Support-Popup: Checkbox steuert das Modal, gleiches Prinzip wie Dark-Mode -->
+    <input type="checkbox" id="support-toggle" class="support-toggle" />
+
+    <!-- Frage-Icon unten links: öffnet das Support-Popup -->
+    <label for="support-toggle" class="support-fab" title="Hilfe & Support">
+      <span>❓</span>
+    </label>
+
+    <!-- Support-Popup -->
+    <div
+      class="support-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="support-title"
+    >
+      <label
+        for="support-toggle"
+        class="support-overlay"
+        title="Schließen"
+      ></label>
+
+      <div class="support-modal-box">
+        <label
+          for="support-toggle"
+          class="support-modal-close"
+          title="Schließen"
+          >✕</label
+        >
+
+        <h3 id="support-title">Wie können wir helfen?</h3>
+        <p class="support-modal-sub">
+          Schreiben Sie uns – unser Support antwortet innerhalb von 24 Stunden.
+        </p>
+
+        <form class="support-form" action="#" method="post">
+          <div class="form-field">
+            <label for="support-email">E-Mail</label>
+            <input
+              type="email"
+              id="support-email"
+              name="email"
+              placeholder="ihre@email.de"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label for="support-nachricht">Ihre Nachricht</label>
+            <textarea
+              id="support-nachricht"
+              name="nachricht"
+              rows="5"
+              placeholder="Wie können wir Ihnen helfen?"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Nachricht senden
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
